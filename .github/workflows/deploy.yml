@@ -1,0 +1,19 @@
+name: Deploy sito su GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout codice
+      uses: actions/checkout@v4
+
+    - name: Deploy cartella sito su gh-pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./sito
