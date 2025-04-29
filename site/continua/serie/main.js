@@ -4,9 +4,9 @@ function calcola() {
     const r2 = Number(document.getElementById('r2').value);
     let risultato = '';
   
-    if (operazione === 'serie') {
+    if (operazione === 'Serie') {
       risultato = r1+r2;
-    } else if (operazione === 'parallelo') {
+    } else if (operazione === 'Parallelo') {
       risultato = Math.round((r1*r2)/(r1+r2)*100)/100;
     }
   
